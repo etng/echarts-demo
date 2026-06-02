@@ -2,6 +2,8 @@
 
 一个基于 Next.js 和 ECharts 的 JSON 图表工作台。页面会自动加载示例数据，也支持粘贴一般性的 JSON 数组或对象，自动识别其中可绘制的数据表，再由用户选择 X 轴、Y 轴、分组字段和图表类型。
 
+在线访问：https://etng.github.io/echarts-demo/
+
 ## 功能概览
 
 ```mermaid

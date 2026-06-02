@@ -38,6 +38,7 @@ const INDEX_FIELD = "__index";
 const SOURCE_FIELD = "__source";
 const GROUP_PREFIX = "__group_";
 const MAX_SERIES_COUNT = 64;
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 const chartTypes: Array<{ value: ChartType; label: string }> = [
   { value: "line", label: "折线图" },
@@ -532,7 +533,7 @@ export default function HomePage() {
   const handleLoadExample = useCallback(async () => {
     setIsLoadingExample(true);
     try {
-      const response = await fetch("/aio.json");
+      const response = await fetch(`${basePath}/aio.json`);
       if (!response.ok) {
         throw new Error("示例数据加载失败，请稍后重试。");
       }
